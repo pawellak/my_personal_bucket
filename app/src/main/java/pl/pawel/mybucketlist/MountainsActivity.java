@@ -12,12 +12,12 @@ public class MountainsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_places_to_go);
+        setContentView(R.layout.activity_mountains);
         setupList();
     }
 
     private void setupList() {
-        BucketListEntry[] placesToGo = {
+        BucketListEntry[] mountainsEntry = {
                 new BucketListEntry("Rysy", "Polish and Slovak name Rysy, meaning \"scratches\".", R.drawable.rysy, 4.5f),
                 new BucketListEntry("Babia Góra", "Gentle from the south, steep from the north.", R.drawable.babia, 5.0f),
                 new BucketListEntry("Śnieżka", "The first recorded German name was Riseberg", R.drawable.sniezka, 4.0f),
@@ -25,8 +25,8 @@ public class MountainsActivity extends AppCompatActivity {
                 new BucketListEntry("Tarnica", "Tarnica is a peak in the Bieszczady Mountains", R.drawable.tarnica, 4.5f),
         };
 
-        RecyclerView recyclerView = findViewById(R.id.recycler_view_places_to_go);
-        BucketListEntryAdapter adapter = new BucketListEntryAdapter(placesToGo);
+        RecyclerView recyclerView = findViewById(R.id.recycler_view_mountains);
+        BucketListEntryAdapter adapter = new BucketListEntryAdapter(mountainsEntry);
         recyclerView.setAdapter(adapter);
     }
 }
